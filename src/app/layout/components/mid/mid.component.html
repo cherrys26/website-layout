@@ -1,20 +1,20 @@
 <mat-grid-list cols="4" rowHeight="100px">
-    <mat-grid-tile *ngFor="let left of leftTemp" [colspan]="left.col" [rowspan]="left.row">
+    <mat-grid-tile [colspan]="3" [rowspan]="5">
         <content>
             <div class="left">
-                <h3>{{left.title}}</h3>
+                <h3>test</h3>
                 <br />
-                <h5>{{left.subtitle}}</h5>
+                <h5>hgello</h5>
                 <br />
                 <button mat-raised-button color="primary">
-                    {{left.button}}
+                    Get Started
                 </button>
             </div>
         </content>
     </mat-grid-tile>
-    <mat-grid-tile *ngFor="let right of rightTemp" [colspan]="right.col" [rowspan]="right.row">
+    <mat-grid-tile [colspan]="1" [rowspan]="5">
         <content>
-            <img src={{right.image}}>
+            hello?
         </content>
     </mat-grid-tile>
 </mat-grid-list>
