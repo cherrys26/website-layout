@@ -1,0 +1,26 @@
+<mat-toolbar color="primary">
+    <span>Company</span>
+
+    <span class="spacer"></span>
+
+    <div class="navbar">
+        <div *ngFor="let tb of toolbar" class="dropdown">
+            <button class="dropbtn">{{tb.dropdown}} <mat-icon size="small">keyboard_arrow_down</mat-icon>
+            </button>
+            <div class="dropdown-content">
+                <div class="row">
+                    <div *ngFor="let test of tb.products" class="column">
+                        <a href={{test}}>{{test}} </a>
+                    </div>
+                    <div *ngFor="let test of tb.about" class="column">
+                        <a href={{test}}>{{test}} </a>
+                    </div>
+                    <div *ngFor="let test of tb.learn" class="column">
+                        <a href={{test}}>{{test}} </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</mat-toolbar>
