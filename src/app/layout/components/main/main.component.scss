@@ -1,0 +1,40 @@
+img {
+    height: 20rem;
+    width: 35rem;
+}
+
+.left {
+    text-align: left;
+}
+
+h3,
+h5 {
+    margin: 0px 0px 20px 0px;
+}
+
+h3 {
+    font-size: 30px;
+}
+
+h5 {
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.mat-flat-button.mat-primary,
+.mat-raised-button.mat-primary,
+.mat-fab.mat-primary,
+.mat-mini-fab.mat-primary {
+    background-color: #3f51b5;
+    width: 50%;
+    border-radius: 25px;
+    height: 50px;
+}
+.mat-flat-button.mat-primary:hover,
+.mat-raised-button.mat-primary:hover,
+.mat-fab.mat-primary:hover,
+.mat-mini-fab.mat-primary:hover {
+    border-radius: 50px;
+    background: #3f51b5;
+    box-shadow: inset 20px 20px 60px #36459a, inset -20px -20px 60px #485dd0;
+}

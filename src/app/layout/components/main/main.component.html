@@ -1,0 +1,21 @@
+<mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile *ngFor="let left of leftTemp" [colspan]="left.col" [rowspan]="left.row">
+        <content>
+            <div class="left">
+                <h3>{{left.title}}</h3>
+                <br />
+                <h5>{{left.subtitle}}</h5>
+                <br />
+                <button mat-raised-button color="primary">
+                    {{left.button}}
+                </button>
+            </div>
+        </content>
+    </mat-grid-tile>
+    <mat-grid-tile *ngFor="let right of rightTemp" [colspan]="right.col" [rowspan]="right.row">
+        <content>
+            <img src={{right.image}}>
+            <br />
+        </content>
+    </mat-grid-tile>
+</mat-grid-list>

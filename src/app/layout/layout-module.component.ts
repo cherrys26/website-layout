@@ -4,6 +4,7 @@ import { Component, OnInit } from '@angular/core';
   selector: 'app-layout-module',
   template: `
     <app-toolbar></app-toolbar>
+    <app-main></app-main>
   `,
   styles: [
   ]

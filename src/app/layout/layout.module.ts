@@ -6,6 +6,7 @@ import { MaterialModule } from '../shared/material.module';
 
 import { LayoutModuleComponent } from './layout-module.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
+import { MainComponent } from './components/main/main.component';
 
 
 const routes: Routes = [
@@ -15,7 +16,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [LayoutModuleComponent, ToolbarComponent],
+  declarations: [LayoutModuleComponent, ToolbarComponent, MainComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

@@ -10,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class ToolbarComponent implements OnInit {
 
   toolbar: any = [];
+  toolbarProducts: any = [];
 
   flag: boolean = false;
 
@@ -30,10 +31,12 @@ export class ToolbarComponent implements OnInit {
   }
 
   getToolbar() {
-    return this.http.get('http://localhost:4400')
+    return this.http.get('http://localhost:4400/toolbar')
       .subscribe(data => {
         console.log(data),
           this.toolbar = data
+        this.toolbarProducts = console.log(data[0]['products'])
+        this.toolbarProducts = data[0]['products']
       }
       )
   }
