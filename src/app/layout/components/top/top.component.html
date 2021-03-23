@@ -2,17 +2,17 @@
     <mat-grid-tile *ngFor="let left of leftTemp" [colspan]="left.col" [rowspan]="left.row">
         <content>
             <div class="left">
-                <h3>{{left.title}}</h3>
+                <h3 id="leftside1">{{left.title}}</h3>
                 <br />
-                <h5>{{left.subtitle}}</h5>
+                <h5 id="leftside2">{{left.subtitle}}</h5>
                 <br />
-                <button mat-raised-button color="primary">
+                <button mat-raised-button color="primary" id="leftside3">
                     {{left.button}}
                 </button>
             </div>
         </content>
     </mat-grid-tile>
-    <mat-grid-tile *ngFor="let right of rightTemp" [colspan]="right.col" [rowspan]="right.row">
+    <mat-grid-tile *ngFor="let right of rightTemp" [colspan]="right.col" [rowspan]="right.row" id="rightside">
         <content>
             <img src={{right.image}}>
         </content>

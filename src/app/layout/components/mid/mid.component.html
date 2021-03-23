@@ -1,20 +1,18 @@
-<mat-grid-list cols="4" rowHeight="100px">
-    <mat-grid-tile [colspan]="3" [rowspan]="5">
+<mat-grid-list cols="4" rowHeight="100px" class="slideup">
+    <mat-grid-tile *ngFor="let left of leftTemp" [colspan]="2" [rowspan]="4">
         <content>
-            <div class="left">
-                <h3>test</h3>
-                <br />
-                <h5>hgello</h5>
-                <br />
-                <button mat-raised-button color="primary">
-                    Get Started
-                </button>
-            </div>
+            <img src={{left.image}}>
         </content>
     </mat-grid-tile>
-    <mat-grid-tile [colspan]="1" [rowspan]="5">
-        <content>
-            hello?
+    <mat-grid-tile *ngFor="let right of rightTemp" [colspan]="2" [rowspan]="4">
+        <content id="right">
+            <h3>{{right.title}}</h3>
+
+            <h5>{{right.subtitle}}</h5>
+            <br />
+            <button mat-raised-button color="primary" class="slideup">
+                {{right.button}}
+            </button>
         </content>
     </mat-grid-tile>
 </mat-grid-list>

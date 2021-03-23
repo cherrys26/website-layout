@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MidComponent implements OnInit {
 
-  constructor() { }
+  leftTemp: any = [];
+  rightTemp: any = [];
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.getMid()
+  }
+
+  getMid() {
+    return this.http.get('http://localhost:4400/mid')
+      .subscribe(mid => {
+        this.leftTemp = mid['left']
+        this.rightTemp = mid['right']
+
+      })
   }
 
 }
