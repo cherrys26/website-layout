@@ -38,9 +38,32 @@ $website-layout-theme: mat-light-theme(
 
 html,
 body {
-  height: 100%;
+  height: 200%;
 }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(200%);
+    color: white;
+    background-color: white;
+    box-shadow: 20px 20px 60px #ffffff, -20px -20px 60px #ffffff;
+    opacity: 0;
+  }
+  50% {
+    color: white;
+    background-color: white;
+    box-shadow: 20px 20px 60px #ffffff, -20px -20px 60px #ffffff;
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.slideup {
+  animation: 1.5s ease-out 0s 1 slideInFromBottom;
 }

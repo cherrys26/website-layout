@@ -1,7 +1,6 @@
-
-#right {
-    text-align: right;
-    width: 20rem;
+mat-grid-list {
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
 }
 
 img {
@@ -10,18 +9,27 @@ img {
     border-radius: 10px;
 }
 
-h3,
-h5 {
-    margin: 0px 0px 20px 0px;
-}
-
 h3 {
-    font-size: 30px;
+    font-style: normal;
 }
 
-h5 {
-    font-size: 20px;
-    font-weight: normal;
+#title {
+    text-align: left;
+}
+
+.left {
+    text-align: center;
+    width: 90%;
+}
+
+mat-card {
+    border-radius: 10px;
+    background-color: rgb(252, 241, 225);
+}
+
+mat-card:hover {
+    background: #fcf1e1;
+    box-shadow: 2px 2px 6px #d6cdbf, -2px -0px 6px #ffffff;
 }
 
 .mat-flat-button.mat-primary,
@@ -29,9 +37,10 @@ h5 {
 .mat-fab.mat-primary,
 .mat-mini-fab.mat-primary {
     background-color: #3f51b5;
-    width: 50%;
+    width: 150%;
     border-radius: 25px;
     height: 50px;
+    font-size: 20px;
 }
 .mat-flat-button.mat-primary:hover,
 .mat-raised-button.mat-primary:hover,
@@ -40,9 +49,5 @@ h5 {
     border-radius: 50px;
     background: #3f51b5;
     box-shadow: inset 20px 20px 60px #36459a, inset -20px -20px 60px #485dd0;
-}
-
-mat-grid-list {
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
+    font-size: 20px;
 }

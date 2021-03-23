@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
     <app-toolbar></app-toolbar>
     <app-top></app-top>
     <app-mid></app-mid>
+    <app-middle></app-middle>
   `,
   styles: [
   ]
