@@ -1,11 +1,13 @@
-<mat-grid-list cols="4" rowHeight="100px" class="slideup">
-    <mat-grid-tile [colspan]="2" [rowspan]="1.5" id="title">
+<mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile [colspan]="2" [rowspan]="1.5" class="title" id="titleAni"
+        [ngClass]="(showTitle === true) ? 'scale-out' : 'scale-in'">
         <content>
             <h1>Trending Products</h1>
             <h3>Let's see what others are looking at!</h3>
         </content>
     </mat-grid-tile>
-    <mat-grid-tile [colspan]="2" [rowspan]="5.5">
+    <mat-grid-tile [colspan]="2" [rowspan]="5.5" class="first" id="firstAni"
+        [ngClass]="(showFirst === true) ? 'scale-out' : 'scale-in'">
 
         <content class="left">
             <mat-card>
@@ -26,7 +28,8 @@
         </content>
 
     </mat-grid-tile>
-    <mat-grid-tile [colspan]="2" [rowspan]="5.5">
+    <mat-grid-tile [colspan]="2" [rowspan]="5.5" class="second" id="secondAni"
+        [ngClass]="(showSecond === true) ? 'scale-out' : 'scale-in'">
 
         <content class="left">
             <mat-card>
@@ -49,7 +52,8 @@
         </content>
 
     </mat-grid-tile>
-    <mat-grid-tile [colspan]="2" [rowspan]="5.5">
+    <mat-grid-tile [colspan]="2" [rowspan]="5.5" class="third" id="thirdAni"
+        [ngClass]="(showThird === true) ? 'scale-out' : 'scale-in'">
 
         <content class="left">
             <mat-card>
@@ -72,7 +76,8 @@
         </content>
 
     </mat-grid-tile>
-    <mat-grid-tile [colspan]="2" [rowspan]="5.5">
+    <mat-grid-tile [colspan]="2" [rowspan]="5.5" class="fourth" id="fourthAni"
+        [ngClass]="(showFourth === true) ? 'scale-out' : 'scale-in'">
 
         <content class="left">
             <mat-card>
@@ -95,10 +100,11 @@
         </content>
 
     </mat-grid-tile>
-    <mat-grid-tile [colspan]="2" [rowspan]="1.5">
+    <mat-grid-tile [colspan]="2" [rowspan]="1.5" class="all" id="allAni"
+        [ngClass]="(showAll === true) ? 'scale-out' : 'scale-in'">
         <content id="right">
             <a href="/products">
-                <button mat-raised-button color="primary" class="slideup">
+                <button mat-raised-button color="primary">
                     View All Products
                 </button>
             </a>
