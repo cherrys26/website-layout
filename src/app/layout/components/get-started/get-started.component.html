@@ -1,0 +1,37 @@
+<mat-grid-list cols="4" rowHeight="100px">
+    <mat-grid-tile [colspan]="4" [rowspan]="1.5" id="top">
+        <content>
+            Get Started Within <br />Minutes Today
+        </content>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="2.5">
+        <content>
+            <video width="320" height="240" autoplay muted loop>
+                <source src="https://media.tenor.com/videos/1cec8528368756e57cf24335f3ab208f/mp4" type="video/mp4">
+            </video>
+        </content>
+    </mat-grid-tile>
+    <mat-grid-tile [colspan]="2" [rowspan]="2.5">
+        <content id="content">
+            <mat-form-field appearance="outline">
+                <mat-label>Enter your email</mat-label>
+                <input matInput placeholder="pat@example.com" [formControl]="email" required>
+                <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+            </mat-form-field>
+            <br />
+            <mat-form-field appearance="outline">
+                <mat-label>Enter your password</mat-label>
+                <input matInput [type]="hide ? 'password' : 'text'">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+            </mat-form-field>
+            <br />
+            <button mat-raised-button color="primary">
+                Get Started
+            </button>
+
+        </content>
+    </mat-grid-tile>
+</mat-grid-list>

@@ -38,11 +38,12 @@ $website-layout-theme: mat-light-theme(
 
 html,
 body {
-  height: 1200px;
+  height: 250%;
 }
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Geneva;
+  color: #5a5a5a;
 }
 
 @keyframes slideInFromBottom {
@@ -66,4 +67,9 @@ body {
 
 .slideup {
   animation: 1.5s ease-out 0s 1 slideInFromBottom;
+}
+
+mat-grid-list {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
 }

@@ -3,6 +3,10 @@ mat-grid-list {
     margin-bottom: 2.5rem;
 }
 
+mat-card-title {
+    text-transform: capitalize;
+}
+
 img {
     height: 20rem;
     width: 35rem;
@@ -13,6 +17,39 @@ h3 {
     font-style: normal;
 }
 
+.first {
+    border-radius: 10px;
+    background-color: #85ff9da8;
+}
+.first:hover {
+    background: #85ff9d;
+    box-shadow: 2px 2px 6px #71d985, -2px -0px 6px #99ffb5;
+}
+.second {
+    border-radius: 10px;
+    background-color: #ffda8583;
+}
+.second:hover {
+    background: #ffda85;
+    box-shadow: 2px 2px 6px #d9b971, -2px -0px 6px #fffb99;
+}
+.third {
+    border-radius: 10px;
+    background-color: #ff85e78e;
+}
+.third:hover {
+    background: #ff85e7;
+    box-shadow: 2px 2px 6px #ff85e7, -2px -0px 6px #ff99ff;
+}
+.fourth {
+    border-radius: 10px;
+    background-color: #85aaffc5;
+}
+.fourth:hover {
+    background: #85aaff;
+    box-shadow: 2px 2px 6px #7191d9, -2px -0px 6px #99c4ff;
+}
+
 #titleAni,
 #firstAni,
 #secondAni,
@@ -20,6 +57,15 @@ h3 {
 #fourthAni,
 #allAni {
     display: none;
+}
+
+#secondAni,
+#fourthAni {
+    justify-content: flex-end;
+}
+#firstAni,
+#thirdAni {
+    justify-content: flex-start;
 }
 
 .left {
