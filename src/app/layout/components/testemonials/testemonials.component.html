@@ -1,34 +1,38 @@
 <mat-grid-list cols="4" rowHeight="100px">
     <mat-grid-tile [colspan]="4" [rowspan]="2" id="header">
         We can do anything you ask for
-
     </mat-grid-tile>
     <mat-grid-tile [colspan]="2" [rowspan]="5">
-        <content *ngFor="let one of test">
-            testone
-            <h1>{{one.title}}</h1>
+        <content *ngFor="let one of leftTestOne">
+            <h1>{{one.image}}</h1>
         </content>
     </mat-grid-tile>
-    <mat-grid-tile [colspan]="2" [rowspan]="5" *ngFor="let two of test2">
+    <mat-grid-tile [colspan]="2" [rowspan]="5" *ngFor="let two of rightTestOne">
         <content>
             testtwo
-            <h1>{{two.yes}}</h1>
+            <h1>{{two.title}}</h1>
+            <q style="font-style: italic;">{{two.quote}}</q>
+            <h1>-<img src={{two.quoter}}></h1>
         </content>
     </mat-grid-tile>
 </mat-grid-list>
 <mat-grid-list cols="4" rowHeight="100px">
-    <mat-grid-tile [colspan]="2" [rowspan]="5">
-        2test1
+    <mat-grid-tile [colspan]="2" [rowspan]="5" *ngFor="let three of leftTestTwo">
+        <content>
+            <h1>{{three.title}}</h1>
+            <q style="font-style: italic;">{{three.quote}}</q>
+            <h1>-<img src={{three.quoter}}></h1>
+        </content>
     </mat-grid-tile>
-    <mat-grid-tile [colspan]="2" [rowspan]="5">
-        2test2
+    <mat-grid-tile [colspan]="2" [rowspan]="5" *ngFor="let four of rightTestTwo">
+        <h1>{{four.image}}</h1>
     </mat-grid-tile>
 </mat-grid-list>
-<mat-grid-list cols="4" rowHeight="100px">
-    <mat-grid-tile [colspan]="2" [rowspan]="5">
-        3test1
-    </mat-grid-tile>
-    <mat-grid-tile [colspan]="2" [rowspan]="5">
-        3test23
+<mat-grid-list cols="4" rowHeight="300px">
+    <mat-grid-tile *ngFor="let last of lastTest">
+        <mat-card>
+            <mat-card-subtitle>{{last.title}}</mat-card-subtitle>
+            <img mat-card-sm-image id="image" src={{last.company}}>
+        </mat-card>
     </mat-grid-tile>
 </mat-grid-list>

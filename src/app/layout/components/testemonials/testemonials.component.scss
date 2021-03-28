@@ -1,3 +1,33 @@
 #header {
     font-size: 50px;
 }
+
+mat-card {
+    height: 75%;
+    width: 80%;
+    text-align: center;
+}
+
+mat-card-subtitle {
+    padding-top: 10%;
+}
+
+#image {
+    align-items: flex-end;
+}
+
+.mat-card-sm-image {
+    padding-top: 15%;
+}
+
+@keyframes fadeSlideGrowKeyframe {
+    30% {
+        transform: opacity(1) ’;
+    }
+    60% {
+        transform: ‘translateY(0) ’;
+    }
+    100% {
+        transform: ‘scale(1) ’;
+    }
+}

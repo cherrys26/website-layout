@@ -5,7 +5,6 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <app-toolbar></app-toolbar>
     <app-top></app-top>
-    <app-mid></app-mid>
     <app-middle></app-middle>
     <app-testemonials></app-testemonials>
     <app-get-started></app-get-started>

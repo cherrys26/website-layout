@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+
 const routes: Routes = [
   { path: 'test', loadChildren: () => import('./test/test.module').then(m => m.TestModule) },
   { path: 'home', loadChildren: () => import('./layout/layout.module').then(m => m.LayoutModule) },

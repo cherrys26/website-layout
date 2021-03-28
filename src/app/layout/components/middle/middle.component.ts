@@ -40,6 +40,7 @@ export class MiddleComponent implements OnInit {
   @HostListener('window:scroll', ['$event']) onScroll(event) {
     const window = event.path[1];
     const currentScrollHeight = window.scrollY;
+    console.log(currentScrollHeight)
 
     if (currentScrollHeight > 600) {
       this.showTitle = false;

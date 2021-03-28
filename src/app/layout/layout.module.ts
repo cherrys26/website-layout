@@ -7,7 +7,6 @@ import { MaterialModule } from '../shared/material.module';
 import { LayoutModuleComponent } from './layout-module.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { TopComponent } from './components/top/top.component';
-import { MidComponent } from './components/mid/mid.component';
 import { MiddleComponent } from './components/middle/middle.component';
 import { TestemonialsComponent } from './components/testemonials/testemonials.component';
 import { FooterComponent } from './components/footer/footer.component';
@@ -22,7 +21,7 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [LayoutModuleComponent, ToolbarComponent, TopComponent, MidComponent, MiddleComponent, TestemonialsComponent, FooterComponent, GetStartedComponent],
+  declarations: [LayoutModuleComponent, ToolbarComponent, TopComponent, MiddleComponent, TestemonialsComponent, FooterComponent, GetStartedComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),

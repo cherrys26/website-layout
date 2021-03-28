@@ -8,8 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopComponent implements OnInit {
 
-  leftTemp: any = [];
-  rightTemp: any = [];
+  topTemp: any = [];
+  botTemp: any = [];
 
   constructor(private http: HttpClient) { }
 
@@ -20,8 +20,8 @@ export class TopComponent implements OnInit {
   getTop() {
     return this.http.get('http://localhost:4400/top')
       .subscribe(top => {
-        this.leftTemp = top['left']
-        this.rightTemp = top['right']
+        this.topTemp = top['first']
+        this.botTemp = top['second']
       })
   }
 
