@@ -38,12 +38,13 @@ $website-layout-theme: mat-light-theme(
 
 html,
 body {
-  height: 250%;
+  height: 6210px;
 }
 body {
   margin: 0;
   font-family: Geneva;
   color: #5a5a5a;
+  background: linear-gradient(#b5a33f2c 20%, #b5a33fc2 30%, #b5a33f2c);
 }
 
 @keyframes slideInFromBottom {

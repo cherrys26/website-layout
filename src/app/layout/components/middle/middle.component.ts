@@ -42,7 +42,7 @@ export class MiddleComponent implements OnInit {
     const currentScrollHeight = window.scrollY;
     console.log(currentScrollHeight)
 
-    if (currentScrollHeight > 600) {
+    if (currentScrollHeight > 1375) {
       this.showTitle = false;
       this.showFirst = false;
       document.getElementById("titleAni").style.display = 'block';
@@ -60,19 +60,19 @@ export class MiddleComponent implements OnInit {
       document.getElementById("fourthAni").style.display = 'none';
       document.getElementById("allAni").style.display = 'none';
     }
-    if (currentScrollHeight > 800) {
+    if (currentScrollHeight > 1550) {
       this.showSecond = false;
       document.getElementById("secondAni").style.display = 'block';
     }
-    if (currentScrollHeight > 1200) {
+    if (currentScrollHeight > 2000) {
       this.showThird = false;
       document.getElementById("thirdAni").style.display = 'block';
     }
-    if (currentScrollHeight > 1400) {
+    if (currentScrollHeight > 2150) {
       this.showFourth = false;
       document.getElementById("fourthAni").style.display = 'block';
     }
-    if (currentScrollHeight > 1600) {
+    if (currentScrollHeight > 2550) {
       this.showAll = false;
       document.getElementById("allAni").style.display = 'block';
     }

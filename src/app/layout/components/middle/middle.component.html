@@ -1,7 +1,7 @@
-<mat-grid-list cols="4" rowHeight="100px">
-    <mat-grid-tile [colspan]="2" [rowspan]="1.5" class="title" id="titleAni"
+<mat-grid-list cols="4" rowHeight="100px" style="justify-content: flex-end;">
+    <mat-grid-tile [colspan]="2" [rowspan]="1.5" id="titleAni"
         [ngClass]="(showTitle === true) ? 'scale-out' : 'scale-in'">
-        <content>
+        <content class="title">
             <h1>Trending Products</h1>
             <h3>Let's see what others are looking at!</h3>
         </content>
@@ -101,9 +101,8 @@
         </content>
 
     </mat-grid-tile>
-    <mat-grid-tile [colspan]="2" [rowspan]="1.5" class="all" id="allAni"
-        [ngClass]="(showAll === true) ? 'scale-out' : 'scale-in'">
-        <content id="right">
+    <mat-grid-tile [colspan]="2" [rowspan]="1.5" id="allAni" [ngClass]="(showAll === true) ? 'scale-out' : 'scale-in'">
+        <content id="right" class="all">
             <a href="/products">
                 <button mat-raised-button color="primary">
                     View All Products

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-layout-module',
@@ -25,6 +25,11 @@ export class LayoutModuleComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  @HostListener('window: scroll', ['$event']) onScroll(event) {
+    const window = event.path
+    console.log(window)
   }
 
 

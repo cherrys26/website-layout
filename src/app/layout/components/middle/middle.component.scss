@@ -7,6 +7,9 @@ mat-card-title {
     text-transform: capitalize;
 }
 
+.mat-grid-tile {
+    justify-content: flex-end !important;
+}
 img {
     height: 20rem;
     width: 35rem;
@@ -17,9 +20,14 @@ h3 {
     font-style: normal;
 }
 
+.title {
+    transform: translate(-40px);
+}
+
 .first {
     border-radius: 10px;
     background-color: #85ff9da8;
+    transform: translate(-25px);
 }
 .first:hover {
     background: #85ff9d;
@@ -28,7 +36,9 @@ h3 {
 .second {
     border-radius: 10px;
     background-color: #ffda8583;
+    transform: translate(25px);
 }
+
 .second:hover {
     background: #ffda85;
     box-shadow: 2px 2px 6px #d9b971, -2px -0px 6px #fffb99;
@@ -36,6 +46,7 @@ h3 {
 .third {
     border-radius: 10px;
     background-color: #ff85e78e;
+    transform: translate(-25px);
 }
 .third:hover {
     background: #ff85e7;
@@ -44,10 +55,15 @@ h3 {
 .fourth {
     border-radius: 10px;
     background-color: #85aaffc5;
+    transform: translate(25px);
 }
 .fourth:hover {
     background: #85aaff;
     box-shadow: 2px 2px 6px #7191d9, -2px -0px 6px #99c4ff;
+}
+
+.all {
+    transform: translate(-70px);
 }
 
 #titleAni,
@@ -57,15 +73,6 @@ h3 {
 #fourthAni,
 #allAni {
     display: none;
-}
-
-#secondAni,
-#fourthAni {
-    justify-content: flex-end;
-}
-#firstAni,
-#thirdAni {
-    justify-content: flex-start;
 }
 
 .left {

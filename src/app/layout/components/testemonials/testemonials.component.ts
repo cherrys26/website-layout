@@ -1,25 +1,27 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
-import { trigger, style, animate, transition, keyframes } from '@angular/animations'
+import { Component, HostListener, OnInit } from '@angular/core';
+import { trigger, style, animate, transition, query, stagger } from '@angular/animations';
 
 @Component({
   selector: 'app-testemonials',
   templateUrl: './testemonials.component.html',
   styleUrls: ['./testemonials.component.scss'],
-  animations: [trigger('fadeSlideGrowKeyframe', [
-    transition(':enter', [
-      style({ opacity: 0, transform: 'scale(0.5) translateY(50px)' }),
-      animate(
-        '500ms',
-        keyframes([
-          style({ opacity: 1, offset: 0.3 }),
-          style({ transform: 'translateY(0)', offset: 0.6 }),
-          style({ transform: 'scale(1)', offset: 1 }),
-        ])
-      ),
+  animations: [
+    trigger('parentAnimation', [
+      transition('void => *', [
+        query('.child', style({ opacity: 0 })),
+        query('.child', stagger('150ms', [
+          animate('100ms .1s ease-out', style({ opacity: 1 }))
+        ]))
+      ]),
+      transition('* => void', [
+        query('.child', style({ opacity: 1 })),
+        query('.child', stagger('50ms', [
+          animate('100ms .1s ease-out', style({ opacity: 0 }))
+        ]))
+      ])
     ])
-  ])
-  ],
+  ]
 })
 export class TestemonialsComponent implements OnInit {
 
@@ -28,6 +30,7 @@ export class TestemonialsComponent implements OnInit {
   rightTestOne: any = []
   leftTestTwo: any = []
   rightTestTwo: any = []
+  public visible: boolean = false;
 
   constructor(private http: HttpClient) { }
 
@@ -46,4 +49,15 @@ export class TestemonialsComponent implements OnInit {
       })
   }
 
+  @HostListener('window:scroll', ['$event']) onScroll(event) {
+    const window = event.path[1];
+    const currentScrollHeight = window.scrollY;
+
+    if (currentScrollHeight > 4650) {
+      this.visible = true
+
+    } else {
+      this.visible = false
+    }
+  }
 }

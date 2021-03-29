@@ -70,14 +70,15 @@
 <button class="btn btn-success btn-circle btn-xl" [ngClass]="(showAddButton === true) ? 'scale-out' : 'scale-in'">
 </button>
 
-<div [@openClose]="isOpen ? 'open' : 'closed'" class="open-close-container">
-    <p>The box is now {{ isOpen ? 'Open' : 'Closed' }}!</p>
-    <button (click)="toggle()">change?</button>
+<div class="parent" @parentAnimation *ngIf="visible">
+    <p class="child">"It's not pining, it's passed on! This parrot is no more! It has ceased to be! It's expired and
+        gone to meet its maker! This is a late parrot! It's a stiff! Bereft of life, it rests in peace! If you hadn't
+        nailed it to the perch, it would be pushing up the daisies! It's rung down the curtain and joined the choir
+        invisible. This is an ex-parrot!"</p>
+    <p class="child">?Nobody expects the Spanish Inquisition!?</p>
+    <p class="child">"I cut down trees, I skip and jump, I like to press wild flowers. I put on women's clothing and
+        hang around in bars."</p>
+    <p class="child">"We use only the finest baby frogs, dew picked and flown from Iraq, cleansed in finest quality
+        spring water, lightly killed, and then sealed in a succulent Swiss quintuple smooth treble cream milk chocolate
+        envelope and lovingly frosted with glucose."</p>
 </div>
-
-<section>
-    <h1>...</h1>
-    <div class="img-wrapper">
-      <h1>ewfweewf</h1>  hello test
-    </div>
-</section>
