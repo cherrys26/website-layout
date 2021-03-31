@@ -9,9 +9,11 @@ const toolbar = require('./json/toolbar.json');
 const top = require('./json/top.json')
 const middle = require('./json/middle.json')
 const testemonials = require('./json/testemonials.json')
+const footer = require('./json/footer.json')
 
-
-
+app.get('/footer', (req, res) => {
+    res.send(footer);
+})
 
 app.get('/toolbar', (req, res) => {
     res.send(toolbar);

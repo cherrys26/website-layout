@@ -1,14 +1,14 @@
 @keyframes slideInFromLeft {
     0% {
         transform: translateX(-100%);
-        color: white;
-        background-color: white;
-        box-shadow: 20px 20px 60px #ffffff, -20px -20px 60px #ffffff;
+        color: #fcefed;
+        background-color: #fcefed;
+        box-shadow: 20px 20px 60px #fcefed, -20px -20px 60px #fcefed;
     }
     50% {
-        color: white;
-        background-color: white;
-        box-shadow: 20px 20px 60px #ffffff, -20px -20px 60px #ffffff;
+        color: #fcefed;
+        background-color: #fcefed;
+        box-shadow: 20px 20px 60px #fcefed, -20px -20px 60px #fcefed;
     }
     100% {
         transform: translateX(0);
@@ -50,8 +50,6 @@ mat-grid-list {
 }
 
 img {
-    height: 20rem;
-    width: 35rem;
     border-radius: 10px;
 }
 
@@ -77,16 +75,18 @@ h5 {
 .mat-raised-button.mat-primary,
 .mat-fab.mat-primary,
 .mat-mini-fab.mat-primary {
-    background-color: #3f51b5;
+    background-color: #edfafc;
     width: 50%;
     border-radius: 25px;
     height: 50px;
+    color: #4b4747;
 }
 .mat-flat-button.mat-primary:hover,
 .mat-raised-button.mat-primary:hover,
 .mat-fab.mat-primary:hover,
 .mat-mini-fab.mat-primary:hover {
     border-radius: 50px;
-    background: #3f51b5;
+    background: #edfafc;
     box-shadow: inset 20px 20px 60px #36459a, inset -20px -20px 60px #485dd0;
+    color: #4b4747;
 }

@@ -14,7 +14,7 @@
             </div>
         </content>
     </mat-grid-tile>
-    <mat-grid-tile *ngFor="let right of topTemp['right']" [colspan]="2" [rowspan]="9" id="rightside">
+    <mat-grid-tile *ngFor="let right of topTemp['right']" [colspan]="2" [rowspan]="18" id="rightside">
         <content>
             <img src={{right.image}}>
         </content>
@@ -32,11 +32,6 @@
                     </button>
                 </a>
             </div>
-        </content>
-    </mat-grid-tile>
-    <mat-grid-tile *ngFor="let ri of botTemp['left']" [colspan]="2" [rowspan]="9" id="rightside">
-        <content>
-            <img src={{ri.image}}>
         </content>
     </mat-grid-tile>
 </mat-grid-list>

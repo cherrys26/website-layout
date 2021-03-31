@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  test: any = []
+
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.getFooter()
+  }
+
+  getFooter() {
+    this.http.get('http://localhost:4400/footer')
+      .subscribe(footer => {
+        console.log(footer);
+        this.test = footer
+
+      }
+      )
   }
 
 }

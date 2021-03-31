@@ -26,40 +26,42 @@ h3 {
 
 .first {
     border-radius: 10px;
-    background-color: #85ff9da8;
+    background-color: #d6f2ffcb;
     transform: translate(-25px);
 }
 .first:hover {
-    background: #85ff9d;
-    box-shadow: 2px 2px 6px #71d985, -2px -0px 6px #99ffb5;
+    background: #d6f2ff;
+    box-shadow: 2px 2px 6px #b6ced9, -2px -2px 6px #f6ffff;
 }
 .second {
     border-radius: 10px;
-    background-color: #ffda8583;
+    background-color: #d6ffe3c5;
     transform: translate(25px);
 }
 
 .second:hover {
-    background: #ffda85;
-    box-shadow: 2px 2px 6px #d9b971, -2px -0px 6px #fffb99;
+    background: #d6ffe3;
+    box-shadow: 2px 2px 6px #b6d9c1, -2px -2px 6px #f6ffff;
 }
 .third {
     border-radius: 10px;
-    background-color: #ff85e78e;
+    background-color: #e3d6ffc5;
     transform: translate(-25px);
 }
 .third:hover {
-    background: #ff85e7;
-    box-shadow: 2px 2px 6px #ff85e7, -2px -0px 6px #ff99ff;
+    background: #e3d6ff;
+    box-shadow: 2px 2px 6px #c1b6d9, -2px -2px 6px #fff6ff;
 }
 .fourth {
     border-radius: 10px;
-    background-color: #85aaffc5;
+    background-color: #85aaffe7;
     transform: translate(25px);
+    color: #ffffff;
 }
 .fourth:hover {
     background: #85aaff;
-    box-shadow: 2px 2px 6px #7191d9, -2px -0px 6px #99c4ff;
+    box-shadow: 2px 2px 6px #7191d9, -2px -2px 6px #99c4ff;
+    color: #ffffff;
 }
 
 .all {
@@ -83,6 +85,7 @@ h3 {
 mat-card {
     border-radius: 10px;
     background-color: rgb(252, 241, 225);
+    min-height: 568px;
 }
 
 mat-card:hover {
@@ -135,15 +138,15 @@ mat-card:hover {
 @keyframes scale-in {
     0% {
         transform: translateY(100%);
-        color: white;
-        background-color: white;
-        box-shadow: 20px 20px 60px #ffffff, -20px -20px 60px #ffffff;
+        color: #ffe5d9;
+        background-color: #ffe5d9;
+        box-shadow: 20px 20px 60px #ffe5d9, -20px -20px 60px #ffe5d9;
         opacity: 0;
     }
     50% {
-        color: white;
-        background-color: white;
-        box-shadow: 20px 20px 60px #ffffff, -20px -20px 60px #ffffff;
+        color: #ffe5d9;
+        background-color: #ffe5d9;
+        box-shadow: 20px 20px 60px #ffe5d9, -20px -20px 60px #ffe5d9;
         opacity: 0;
     }
     100% {

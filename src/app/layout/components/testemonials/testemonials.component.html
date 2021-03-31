@@ -1,4 +1,4 @@
-<mat-grid-list cols="4" rowHeight="100px">
+<mat-grid-list cols="4" rowHeight="100px" id="start">
     <mat-grid-tile [colspan]="4" [rowspan]="2" id="header">
         We can do anything you ask for
     </mat-grid-tile>
@@ -8,19 +8,21 @@
         </content>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="2" [rowspan]="8" *ngFor="let two of rightTestOne">
-        <content>
+        <content id="firstQuote">
             <h1>{{two.title}}</h1>
             <q style="font-style: italic;">{{two.quote}}</q>
-            <h1>-<img src={{two.quoter}}></h1>
+            <h1>-<img src={{two.quoter}} class="company"></h1>
         </content>
     </mat-grid-tile>
 </mat-grid-list>
 <mat-grid-list cols="4" rowHeight="100px">
     <mat-grid-tile [colspan]="2" [rowspan]="8" *ngFor="let three of leftTestTwo">
-        <content>
+        <content id="secondQuote">
             <h1>{{three.title}}</h1>
             <q style="font-style: italic;">{{three.quote}}</q>
-            <h1>-<img src={{three.quoter}}></h1>
+            <h1>
+                <span>-</span><img src={{three.quoter}} class="company">
+            </h1>
         </content>
     </mat-grid-tile>
     <mat-grid-tile [colspan]="2" [rowspan]="8" *ngFor="let four of rightTestTwo">

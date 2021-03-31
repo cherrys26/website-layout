@@ -31,6 +31,7 @@ export class TestComponent implements OnInit {
   }
 
 
+  
   @HostListener('window:scroll', ['$event']) onScroll(event) {
     const window = event.path[1];
     const currentScrollHeight = window.scrollY;

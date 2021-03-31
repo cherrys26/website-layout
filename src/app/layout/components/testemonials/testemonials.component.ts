@@ -53,7 +53,7 @@ export class TestemonialsComponent implements OnInit {
     const window = event.path[1];
     const currentScrollHeight = window.scrollY;
 
-    if (currentScrollHeight > 4650) {
+    if (currentScrollHeight > 4750) {
       this.visible = true
 
     } else {
